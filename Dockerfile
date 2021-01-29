@@ -32,5 +32,7 @@ RUN apt-get update; apt-get install -y nano net-tools build-essential curl libed
 COPY includes/entrypoint.sh /
 ADD includes/asterisk /etc/asterisk
 
+EXPOSE 5060/udp
+
 ENTRYPOINT ["/entrypoint.sh"]
 # ENTRYPOINT ["/bin/bash"]
